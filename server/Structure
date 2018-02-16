@@ -1,0 +1,16 @@
+报文结构
+struct Mes
+{
+command char[10]
+message char[10]
+messagelength  int
+}
+
+command
+{
+Login:0
+Logout:1
+Join_Chatroom:2
+Leave_Chatroom:3
+
+}

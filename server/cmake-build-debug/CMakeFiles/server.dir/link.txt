@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/server.dir/main.cpp.o CMakeFiles/server.dir/Server.cpp.o CMakeFiles/server.dir/Handler.cpp.o CMakeFiles/server.dir/Config.cpp.o CMakeFiles/server.dir/Functools.cpp.o CMakeFiles/server.dir/test.cpp.o CMakeFiles/server.dir/ThreadPool.cpp.o  -o server 
