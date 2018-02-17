@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhoubin/CLionProjects/server
+CMAKE_SOURCE_DIR = /home/zhoubin/ProjectOnGit/ChatRoom/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhoubin/CLionProjects/server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/server.dir/flags.make
 
 CMakeFiles/server.dir/main.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/zhoubin/CLionProjects/server/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp
 
 CMakeFiles/server.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp > CMakeFiles/server.dir/main.cpp.i
 
 CMakeFiles/server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp -o CMakeFiles/server.dir/main.cpp.s
 
 CMakeFiles/server.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/server.dir/main.cpp.o.provides.build: CMakeFiles/server.dir/main.cpp.
 
 CMakeFiles/server.dir/Server.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/Server.cpp.o: ../Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/Server.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Server.cpp.o -c /home/zhoubin/CLionProjects/server/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/Server.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Server.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.cpp
 
 CMakeFiles/server.dir/Server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Server.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/Server.cpp > CMakeFiles/server.dir/Server.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.cpp > CMakeFiles/server.dir/Server.cpp.i
 
 CMakeFiles/server.dir/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Server.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/Server.cpp -o CMakeFiles/server.dir/Server.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.cpp -o CMakeFiles/server.dir/Server.cpp.s
 
 CMakeFiles/server.dir/Server.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/server.dir/Server.cpp.o.provides.build: CMakeFiles/server.dir/Server.
 
 CMakeFiles/server.dir/Handler.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/Handler.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Handler.cpp.o -c /home/zhoubin/CLionProjects/server/Handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/Handler.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Handler.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.cpp
 
 CMakeFiles/server.dir/Handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Handler.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/Handler.cpp > CMakeFiles/server.dir/Handler.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.cpp > CMakeFiles/server.dir/Handler.cpp.i
 
 CMakeFiles/server.dir/Handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Handler.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/Handler.cpp -o CMakeFiles/server.dir/Handler.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.cpp -o CMakeFiles/server.dir/Handler.cpp.s
 
 CMakeFiles/server.dir/Handler.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/server.dir/Handler.cpp.o.provides.build: CMakeFiles/server.dir/Handle
 
 CMakeFiles/server.dir/Config.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/Config.cpp.o: ../Config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/Config.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Config.cpp.o -c /home/zhoubin/CLionProjects/server/Config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/Config.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Config.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.cpp
 
 CMakeFiles/server.dir/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Config.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/Config.cpp > CMakeFiles/server.dir/Config.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.cpp > CMakeFiles/server.dir/Config.cpp.i
 
 CMakeFiles/server.dir/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Config.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/Config.cpp -o CMakeFiles/server.dir/Config.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.cpp -o CMakeFiles/server.dir/Config.cpp.s
 
 CMakeFiles/server.dir/Config.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/server.dir/Config.cpp.o.provides.build: CMakeFiles/server.dir/Config.
 
 CMakeFiles/server.dir/Functools.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/Functools.cpp.o: ../Functools.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/Functools.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Functools.cpp.o -c /home/zhoubin/CLionProjects/server/Functools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server.dir/Functools.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Functools.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.cpp
 
 CMakeFiles/server.dir/Functools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Functools.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/Functools.cpp > CMakeFiles/server.dir/Functools.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.cpp > CMakeFiles/server.dir/Functools.cpp.i
 
 CMakeFiles/server.dir/Functools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Functools.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/Functools.cpp -o CMakeFiles/server.dir/Functools.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.cpp -o CMakeFiles/server.dir/Functools.cpp.s
 
 CMakeFiles/server.dir/Functools.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/server.dir/Functools.cpp.o.provides.build: CMakeFiles/server.dir/Func
 
 CMakeFiles/server.dir/test.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/test.cpp.o: ../test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/test.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/test.cpp.o -c /home/zhoubin/CLionProjects/server/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server.dir/test.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/test.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp
 
 CMakeFiles/server.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/test.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/test.cpp > CMakeFiles/server.dir/test.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp > CMakeFiles/server.dir/test.cpp.i
 
 CMakeFiles/server.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/test.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/test.cpp -o CMakeFiles/server.dir/test.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp -o CMakeFiles/server.dir/test.cpp.s
 
 CMakeFiles/server.dir/test.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/server.dir/test.cpp.o.provides.build: CMakeFiles/server.dir/test.cpp.
 
 CMakeFiles/server.dir/ThreadPool.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/ThreadPool.cpp.o: ../ThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server.dir/ThreadPool.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/ThreadPool.cpp.o -c /home/zhoubin/CLionProjects/server/ThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server.dir/ThreadPool.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/ThreadPool.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.cpp
 
 CMakeFiles/server.dir/ThreadPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/ThreadPool.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/CLionProjects/server/ThreadPool.cpp > CMakeFiles/server.dir/ThreadPool.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.cpp > CMakeFiles/server.dir/ThreadPool.cpp.i
 
 CMakeFiles/server.dir/ThreadPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/ThreadPool.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/CLionProjects/server/ThreadPool.cpp -o CMakeFiles/server.dir/ThreadPool.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.cpp -o CMakeFiles/server.dir/ThreadPool.cpp.s
 
 CMakeFiles/server.dir/ThreadPool.cpp.o.requires:
 
@@ -225,6 +225,30 @@ CMakeFiles/server.dir/ThreadPool.cpp.o.provides: CMakeFiles/server.dir/ThreadPoo
 CMakeFiles/server.dir/ThreadPool.cpp.o.provides.build: CMakeFiles/server.dir/ThreadPool.cpp.o
 
 
+CMakeFiles/server.dir/Exception.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/Exception.cpp.o: ../Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server.dir/Exception.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/Exception.cpp.o -c /home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.cpp
+
+CMakeFiles/server.dir/Exception.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/Exception.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.cpp > CMakeFiles/server.dir/Exception.cpp.i
+
+CMakeFiles/server.dir/Exception.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/Exception.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.cpp -o CMakeFiles/server.dir/Exception.cpp.s
+
+CMakeFiles/server.dir/Exception.cpp.o.requires:
+
+.PHONY : CMakeFiles/server.dir/Exception.cpp.o.requires
+
+CMakeFiles/server.dir/Exception.cpp.o.provides: CMakeFiles/server.dir/Exception.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Exception.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/Exception.cpp.o.provides
+
+CMakeFiles/server.dir/Exception.cpp.o.provides.build: CMakeFiles/server.dir/Exception.cpp.o
+
+
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/main.cpp.o" \
@@ -233,7 +257,8 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/Config.cpp.o" \
 "CMakeFiles/server.dir/Functools.cpp.o" \
 "CMakeFiles/server.dir/test.cpp.o" \
-"CMakeFiles/server.dir/ThreadPool.cpp.o"
+"CMakeFiles/server.dir/ThreadPool.cpp.o" \
+"CMakeFiles/server.dir/Exception.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ server: CMakeFiles/server.dir/Config.cpp.o
 server: CMakeFiles/server.dir/Functools.cpp.o
 server: CMakeFiles/server.dir/test.cpp.o
 server: CMakeFiles/server.dir/ThreadPool.cpp.o
+server: CMakeFiles/server.dir/Exception.cpp.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -262,6 +288,7 @@ CMakeFiles/server.dir/requires: CMakeFiles/server.dir/Config.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/Functools.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/test.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/ThreadPool.cpp.o.requires
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/Exception.cpp.o.requires
 
 .PHONY : CMakeFiles/server.dir/requires
 
@@ -270,6 +297,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd /home/zhoubin/CLionProjects/server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zhoubin/CLionProjects/server /home/zhoubin/CLionProjects/server /home/zhoubin/CLionProjects/server/cmake-build-debug /home/zhoubin/CLionProjects/server/cmake-build-debug /home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zhoubin/ProjectOnGit/ChatRoom/server /home/zhoubin/ProjectOnGit/ChatRoom/server /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 

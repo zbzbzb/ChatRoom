@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhoubin/CLionProjects/server
+CMAKE_SOURCE_DIR = /home/zhoubin/ProjectOnGit/ChatRoom/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhoubin/CLionProjects/server/cmake-build-debug
+CMAKE_BINARY_DIR = /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles /home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhoubin/CLionProjects/server/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhoubin/ProjectOnGit/ChatRoom/server/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,33 @@ Config.s: Config.cpp.s
 Config.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Config.cpp.s
 .PHONY : Config.cpp.s
+
+Exception.o: Exception.cpp.o
+
+.PHONY : Exception.o
+
+# target to build an object file
+Exception.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Exception.cpp.o
+.PHONY : Exception.cpp.o
+
+Exception.i: Exception.cpp.i
+
+.PHONY : Exception.i
+
+# target to preprocess a source file
+Exception.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Exception.cpp.i
+.PHONY : Exception.cpp.i
+
+Exception.s: Exception.cpp.s
+
+.PHONY : Exception.s
+
+# target to generate assembly for a file
+Exception.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Exception.cpp.s
+.PHONY : Exception.cpp.s
 
 Functools.o: Functools.cpp.o
 
@@ -324,6 +351,9 @@ help:
 	@echo "... Config.o"
 	@echo "... Config.i"
 	@echo "... Config.s"
+	@echo "... Exception.o"
+	@echo "... Exception.i"
+	@echo "... Exception.s"
 	@echo "... Functools.o"
 	@echo "... Functools.i"
 	@echo "... Functools.s"

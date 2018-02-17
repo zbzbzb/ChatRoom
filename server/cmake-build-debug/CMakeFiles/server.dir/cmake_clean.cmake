@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/Functools.cpp.o"
   "CMakeFiles/server.dir/test.cpp.o"
   "CMakeFiles/server.dir/ThreadPool.cpp.o"
+  "CMakeFiles/server.dir/Exception.cpp.o"
   "server.pdb"
   "server"
 )

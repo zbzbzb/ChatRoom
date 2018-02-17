@@ -11,11 +11,17 @@ CMakeFiles/server.dir/Functools.cpp.o: ../Functools.h
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.cpp
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.h
 
+CMakeFiles/server.dir/Server.cpp.o: ../Config.h
 CMakeFiles/server.dir/Server.cpp.o: ../Handler.h
 CMakeFiles/server.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/server.dir/Server.cpp.o: ../Server.h
 
+CMakeFiles/server.dir/ThreadPool.cpp.o: ../ThreadPool.cpp
+CMakeFiles/server.dir/ThreadPool.cpp.o: ../ThreadPool.h
+
 CMakeFiles/server.dir/main.cpp.o: ../Config.h
 CMakeFiles/server.dir/main.cpp.o: ../Functools.h
 CMakeFiles/server.dir/main.cpp.o: ../main.cpp
+
+CMakeFiles/server.dir/test.cpp.o: ../test.cpp
 

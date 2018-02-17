@@ -12,6 +12,8 @@
 #include<sys/types.h>
 #include<sys/fcntl.h>
 #include<netinet/in.h>
+#include<iostream>
+#include<error.h>
 
 
 using namespace std;
