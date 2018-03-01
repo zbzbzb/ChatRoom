@@ -5,6 +5,13 @@ CMakeFiles/server.dir/Config.cpp.o: ../Config.cpp
 CMakeFiles/server.dir/Config.cpp.o: ../Config.h
 CMakeFiles/server.dir/Config.cpp.o: ../Functools.h
 
+CMakeFiles/server.dir/Epoll.cpp.o: ../Epoll.cpp
+CMakeFiles/server.dir/Epoll.cpp.o: ../Epoll.h
+CMakeFiles/server.dir/Epoll.cpp.o: ../Exception.h
+
+CMakeFiles/server.dir/Exception.cpp.o: ../Exception.cpp
+CMakeFiles/server.dir/Exception.cpp.o: ../Exception.h
+
 CMakeFiles/server.dir/Functools.cpp.o: ../Functools.cpp
 CMakeFiles/server.dir/Functools.cpp.o: ../Functools.h
 
@@ -12,15 +19,31 @@ CMakeFiles/server.dir/Handler.cpp.o: ../Handler.cpp
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.h
 
 CMakeFiles/server.dir/Server.cpp.o: ../Config.h
+CMakeFiles/server.dir/Server.cpp.o: ../Epoll.h
+CMakeFiles/server.dir/Server.cpp.o: ../Exception.h
 CMakeFiles/server.dir/Server.cpp.o: ../Handler.h
 CMakeFiles/server.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/server.dir/Server.cpp.o: ../Server.h
+CMakeFiles/server.dir/Server.cpp.o: ../Task.h
+CMakeFiles/server.dir/Server.cpp.o: ../ThreadPool.h
 
+CMakeFiles/server.dir/Task.cpp.o: ../Handler.h
+CMakeFiles/server.dir/Task.cpp.o: ../Task.cpp
+CMakeFiles/server.dir/Task.cpp.o: ../Task.h
+
+CMakeFiles/server.dir/ThreadPool.cpp.o: ../Handler.h
+CMakeFiles/server.dir/ThreadPool.cpp.o: ../Task.h
 CMakeFiles/server.dir/ThreadPool.cpp.o: ../ThreadPool.cpp
 CMakeFiles/server.dir/ThreadPool.cpp.o: ../ThreadPool.h
 
 CMakeFiles/server.dir/main.cpp.o: ../Config.h
+CMakeFiles/server.dir/main.cpp.o: ../Epoll.h
+CMakeFiles/server.dir/main.cpp.o: ../Exception.h
 CMakeFiles/server.dir/main.cpp.o: ../Functools.h
+CMakeFiles/server.dir/main.cpp.o: ../Handler.h
+CMakeFiles/server.dir/main.cpp.o: ../Server.h
+CMakeFiles/server.dir/main.cpp.o: ../Task.h
+CMakeFiles/server.dir/main.cpp.o: ../ThreadPool.h
 CMakeFiles/server.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/server.dir/test.cpp.o: ../test.cpp

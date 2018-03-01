@@ -1,16 +1,38 @@
 报文结构
-struct Mes
+struct ClientMes
 {
-command char[10]
-message char[10]
-messagelength  int
+
+int command;
+char message[120];
 }
 
-command
+struct ServerMes
 {
+int command;
+char message[120];
+}
+
+Clientcommand
+{
+
+
 Login:0
 Logout:1
-Join_Chatroom:2
-Leave_Chatroom:3
+JoinChatRoom:2
+LeaveChatRoom:3
+
+AskChatRoomList:4
+ChatRoomMes:5
+
+}
+
+ServerMes
+{
+LogFail:0
+
+LogSuccess:1
+RsaKey:2
+ChatRoomMes:3
+
 
 }

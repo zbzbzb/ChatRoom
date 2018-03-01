@@ -23,6 +23,8 @@ public:
     static Config & Instance();
 
     void Init();
+
+    void All();
 };
 
 

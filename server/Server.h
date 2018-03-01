@@ -14,23 +14,38 @@
 #include<netinet/in.h>
 #include<iostream>
 #include<error.h>
+#include"ThreadPool.h"
+#include<string.h>
+#include<sys/epoll.h>
+#include<sys/select.h>
+#include"Epoll.h"
+#include "User.h"
 
+#define EPOLL_MAX 100
 
 using namespace std;
 
 
+
 class Server {
 public:
-    int Bind(sockaddr_in addr);
+    Server(int fdNum,const Handler handler);
+
+    int Bind();
     int Listen();
     void Run();
 
 private:
     int m_listenFd;
     vector<int> m_connFd;
-    Handler *m_handler;
-    int m_epollFd;
+    Handler m_handler;
+    Epoll m_ep;
+    int m_fdNum;
 
+
+    void ClearDelFd();
+
+    void CurConnFd();
 };
 
 

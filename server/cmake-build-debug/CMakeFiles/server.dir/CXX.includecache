@@ -11,6 +11,8 @@ Config.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h
 fstream
 -
+iostream
+-
 Functools.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.h
 
@@ -20,6 +22,34 @@ map
 string
 -
 vector
+-
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.cpp
+glog/logging.h
+-
+Epoll.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.h
+sys/epoll.h
+-
+sys/select.h
+-
+iostream
+-
+exception
+-
+Exception.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.cpp
+Exception.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.h
+exception
+-
+error.h
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.cpp
@@ -41,13 +71,29 @@ Handler.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
+iostream
+-
+stdio.h
+-
+stdlib.h
+-
+error.h
+-
+unistd.h
+-
+vector
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.cpp
 Server.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h
 Config.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h
-string
+glog/logging.h
+-
+algorithm
+-
+functional
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h
@@ -67,12 +113,46 @@ netinet/in.h
 -
 iostream
 -
+error.h
+-
+ThreadPool.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.h
+string.h
+-
+sys/epoll.h
+-
+sys/select.h
+-
+Epoll.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.cpp
+Task.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.h
+string
+-
+vector
+-
+Handler.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.cpp
 ThreadPool.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.h
+glog/logging.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.h
+pthread.h
+-
+Task.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.h
+iostream
+-
+queue
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp
 iostream
@@ -81,7 +161,19 @@ Functools.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Functools.h
 Config.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h
+ThreadPool.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.h
 exception
+-
+glog/logging.h
+-
+Task.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.h
+Handler.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
+Server.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h
+pthread.h
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp

@@ -4,6 +4,7 @@
 
 #include "Config.h"
 #include<fstream>
+#include <iostream>
 #include"Functools.h"
 
 using namespace std;
@@ -22,8 +23,10 @@ void Config::Init()
     string keyValue;
     while(getline(fConfig,keyValue))
     {
+        //cout<<keyValue<<endl;
         Functools::Split(keyValue,del,v);
         m_config[v[0]]=v[1];
+        v.clear();
     }
 
 }
@@ -49,6 +52,14 @@ Config &Config::Instance() {
     }
 
     return *instance;
+}
+
+void Config::All()
+{
+    for(auto v=m_config.begin();v!=m_config.end();++v)
+    {
+        cout<<(*v).first<<"="<<(*v).second<<endl;
+    }
 }
 
 

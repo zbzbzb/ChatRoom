@@ -90,6 +90,12 @@
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Exception.cpp">
 			<Option target="server"/>
 		</Unit>
@@ -114,10 +120,22 @@
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.cpp">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ThreadPool.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/User.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp">

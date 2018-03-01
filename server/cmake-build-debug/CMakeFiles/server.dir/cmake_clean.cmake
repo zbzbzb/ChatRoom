@@ -7,6 +7,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/test.cpp.o"
   "CMakeFiles/server.dir/ThreadPool.cpp.o"
   "CMakeFiles/server.dir/Exception.cpp.o"
+  "CMakeFiles/server.dir/Task.cpp.o"
+  "CMakeFiles/server.dir/Epoll.cpp.o"
+  "CMakeFiles/server.dir/User.cpp.o"
   "server.pdb"
   "server"
 )
