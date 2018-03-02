@@ -10,6 +10,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/Task.cpp.o"
   "CMakeFiles/server.dir/Epoll.cpp.o"
   "CMakeFiles/server.dir/User.cpp.o"
+  "CMakeFiles/server.dir/ServerMes.cpp.o"
+  "CMakeFiles/server.dir/ClientMes.cpp.o"
+  "CMakeFiles/server.dir/Db.cpp.o"
+  "CMakeFiles/server.dir/md5.cpp.o"
   "server.pdb"
   "server"
 )

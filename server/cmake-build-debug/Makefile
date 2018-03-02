@@ -123,6 +123,33 @@ server/fast:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+ClientMes.o: ClientMes.cpp.o
+
+.PHONY : ClientMes.o
+
+# target to build an object file
+ClientMes.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ClientMes.cpp.o
+.PHONY : ClientMes.cpp.o
+
+ClientMes.i: ClientMes.cpp.i
+
+.PHONY : ClientMes.i
+
+# target to preprocess a source file
+ClientMes.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ClientMes.cpp.i
+.PHONY : ClientMes.cpp.i
+
+ClientMes.s: ClientMes.cpp.s
+
+.PHONY : ClientMes.s
+
+# target to generate assembly for a file
+ClientMes.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ClientMes.cpp.s
+.PHONY : ClientMes.cpp.s
+
 Config.o: Config.cpp.o
 
 .PHONY : Config.o
@@ -149,6 +176,33 @@ Config.s: Config.cpp.s
 Config.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Config.cpp.s
 .PHONY : Config.cpp.s
+
+Db.o: Db.cpp.o
+
+.PHONY : Db.o
+
+# target to build an object file
+Db.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Db.cpp.o
+.PHONY : Db.cpp.o
+
+Db.i: Db.cpp.i
+
+.PHONY : Db.i
+
+# target to preprocess a source file
+Db.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Db.cpp.i
+.PHONY : Db.cpp.i
+
+Db.s: Db.cpp.s
+
+.PHONY : Db.s
+
+# target to generate assembly for a file
+Db.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Db.cpp.s
+.PHONY : Db.cpp.s
 
 Epoll.o: Epoll.cpp.o
 
@@ -285,6 +339,33 @@ Server.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
+ServerMes.o: ServerMes.cpp.o
+
+.PHONY : ServerMes.o
+
+# target to build an object file
+ServerMes.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerMes.cpp.o
+.PHONY : ServerMes.cpp.o
+
+ServerMes.i: ServerMes.cpp.i
+
+.PHONY : ServerMes.i
+
+# target to preprocess a source file
+ServerMes.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerMes.cpp.i
+.PHONY : ServerMes.cpp.i
+
+ServerMes.s: ServerMes.cpp.s
+
+.PHONY : ServerMes.s
+
+# target to generate assembly for a file
+ServerMes.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ServerMes.cpp.s
+.PHONY : ServerMes.cpp.s
+
 Task.o: Task.cpp.o
 
 .PHONY : Task.o
@@ -393,6 +474,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+md5.o: md5.cpp.o
+
+.PHONY : md5.o
+
+# target to build an object file
+md5.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/md5.cpp.o
+.PHONY : md5.cpp.o
+
+md5.i: md5.cpp.i
+
+.PHONY : md5.i
+
+# target to preprocess a source file
+md5.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/md5.cpp.i
+.PHONY : md5.cpp.i
+
+md5.s: md5.cpp.s
+
+.PHONY : md5.s
+
+# target to generate assembly for a file
+md5.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/md5.cpp.s
+.PHONY : md5.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -429,9 +537,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... server"
 	@echo "... edit_cache"
+	@echo "... ClientMes.o"
+	@echo "... ClientMes.i"
+	@echo "... ClientMes.s"
 	@echo "... Config.o"
 	@echo "... Config.i"
 	@echo "... Config.s"
+	@echo "... Db.o"
+	@echo "... Db.i"
+	@echo "... Db.s"
 	@echo "... Epoll.o"
 	@echo "... Epoll.i"
 	@echo "... Epoll.s"
@@ -447,6 +561,9 @@ help:
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
+	@echo "... ServerMes.o"
+	@echo "... ServerMes.i"
+	@echo "... ServerMes.s"
 	@echo "... Task.o"
 	@echo "... Task.i"
 	@echo "... Task.s"
@@ -459,6 +576,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... md5.o"
+	@echo "... md5.i"
+	@echo "... md5.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

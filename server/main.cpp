@@ -8,20 +8,14 @@
 #include"Task.h"
 #include "Handler.h"
 #include "Server.h"
+#include "Db.h"
 #include<pthread.h>
+#include"md5.h"
 
 
 using namespace std;
 
-void task_handler(vector<string> arg)
-{
-    sleep(3);
-    cout<<arg[0]<<endl;
-}
-
-
-
-
+Db * Db::m_instance=NULL;
 
 
 Config* Config::instance=NULL;
@@ -29,6 +23,8 @@ int main() {
 
     google::InitGoogleLogging("./logfile");
 
+    cout<<Db::Instance().Check("zb",MD5("123456").toStr());
+    exit(0);
     Handler h;
 
     Server s(1000,h);

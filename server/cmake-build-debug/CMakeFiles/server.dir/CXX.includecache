@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.cpp
+ClientMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
+
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.cpp
 Config.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h
@@ -22,6 +28,18 @@ map
 string
 -
 vector
+-
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.cpp
+Db.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.h
+mysql/mysql.h
+-
+Config.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h
+iostream
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.cpp
@@ -69,6 +87,12 @@ map
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.cpp
 Handler.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
+User.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h
+ClientMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
+ServerMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.h
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
 iostream
@@ -125,6 +149,14 @@ sys/select.h
 -
 Epoll.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.h
+User.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.cpp
+ServerMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.h
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Task.cpp
 Task.h
@@ -154,6 +186,16 @@ iostream
 queue
 -
 
+/home/zhoubin/ProjectOnGit/ChatRoom/server/User.cpp
+User.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h
+string
+-
+iostream
+-
+
 /home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp
 iostream
 -
@@ -173,7 +215,21 @@ Handler.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
 Server.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h
+Db.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.h
 pthread.h
+-
+md5.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.cpp
+md5.h
+/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.h
+string
+-
+cstring
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp

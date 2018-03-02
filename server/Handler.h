@@ -15,7 +15,7 @@ using namespace std;
 
 class Handler {
 public:
-    virtual void handle(const int fd,const vector<int> & v);d
+    virtual void handle(const int fd,const vector<int> & v);
 };
 
 

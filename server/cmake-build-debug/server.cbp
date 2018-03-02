@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Config.cpp">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Config.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Db.h">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Epoll.cpp">
@@ -120,6 +132,12 @@
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Server.h">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/ServerMes.h">
+			<Option target="server"/>
+		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/Task.cpp">
 			<Option target="server"/>
 		</Unit>
@@ -139,6 +157,12 @@
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/main.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/md5.h">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/server/test.cpp">

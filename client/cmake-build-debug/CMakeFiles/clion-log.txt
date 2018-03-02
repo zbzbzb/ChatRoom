@@ -1,0 +1,4 @@
+/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/zhoubin/ProjectOnGit/ChatRoom/client
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zhoubin/ProjectOnGit/ChatRoom/client/cmake-build-debug
