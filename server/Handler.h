@@ -10,6 +10,7 @@
 #include<error.h>
 #include<unistd.h>
 #include<vector>
+#include"Db.h"
 
 using namespace std;
 

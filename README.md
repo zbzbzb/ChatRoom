@@ -1,2 +1,13 @@
 # ChatRoom
-ChatRoom on Linux Environment
+Linux环境下实现的一个简单网络聊天室
+
+包括服务器端和客户端，基于命令行操作
+
+服务器端使用`epoll`监听连接，采用线程池来处理连接。使用MySQL作为数据存储，通过封装libmysqlclient中的C语言API实现数据库操作。
+服务器配置项从配置文件读取，将读取到的键值对注册到全局变量中。
+
+客户端使用`libcurses`完成简单界面。
+
+数据传输使用TCP套接字实现。使用RSA进行加密处理。
+
+

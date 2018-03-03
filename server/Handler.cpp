@@ -29,8 +29,7 @@ void Handler::handle(const int fd,const vector<int> &v) {
 
     }
     else if(n==clientMesSize) {
-        cout << c_mes.m_command << endl;
-        cout << c_mes.m_mes << endl;
+        cout<<Db::Instance().Check(c_mes.m_mes);
     }
 
 

@@ -15,9 +15,13 @@
 class Db {
 public:
 
+    Db();
+
     static Db & Instance();
 
     void Init();
+
+    ~Db();
 
     bool Check(const string userName,const string userPw);
 private:
