@@ -37,11 +37,14 @@ public:
     void Run();
     void Pro();
     bool Login();
+    vector<string> GetChatList();
 
     Client();
     ~Client();
 
     int StartUp();
+
+    void JoinChat();
 };
 
 

@@ -23,8 +23,7 @@ int main() {
 
     google::InitGoogleLogging("./logfile");
 
-    cout<<Db::Instance().Check("zb",MD5("123456").toStr());
-    exit(0);
+
     Handler h;
 
     Server s(1000,h);

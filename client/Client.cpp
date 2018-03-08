@@ -5,6 +5,13 @@
 
 #include <cstring>
 #include "Client.h"
+#include<memory>
+#include"ClientMes.h"
+
+#define CLIENT_MES_SIZE 124
+#define SERVER_MES_SIZE 124
+
+
 
 using namespace std;
 
@@ -79,22 +86,27 @@ bool Client::Login(){
 
 
 
+
     string tmp=userName+"="+MD5(userPw).toStr();
 
-    strcpy(loginMes.m_mes,tmp.c_str());
+    strcpy(loginMes.m_message,tmp.c_str());
 
     write(m_connFd,&loginMes,sizeof(loginMes));
 
     ServerMes loginResult;
 
-    read(m_connFd,&loginResult,sizeof(loginResult));
+    int n=read(m_connFd,&loginResult,sizeof(loginResult));
 
-    if(loginResult.m_command==MES_SERV_LOGSUCCESS)
+
+
+    if(loginResult.m_command==MES_SERVER_LOGSUCCESS)
     {
+        cout<<loginResult.m_message<<endl;
         return true;
     }
     else
     {
+        cout<<loginResult.m_message<<endl;
         close(m_connFd);
         return false;
     }
@@ -125,6 +137,29 @@ Client::Client() {
 }
 
 void Client::Pro() {
+    //GetChatList();
+    cout<<"1.Join ChatRoom"<<endl;
+    cout<<"2.Quit"<<endl;
+}
+
+vector<string> Client::GetChatList()
+{
+    shared_ptr<ClientMes> sendMes=BuildClientMes(CLIENT_MES_GETCHATLIST,"");
+    write(m_connFd,sendMes.get(),CLIENT_MES_SIZE);
+
+    ServerMes recvMes;
+
+    read(m_connFd,&recvMes,SERVER_MES_SIZE);
+
+
+
+
+}
+
+void Client::JoinChat()
+{
+    shared_ptr<ClientMes> sendMes=BuildClientMes(CLIENT_MES_JOINCHAT,"");
+    write(m_connFd,sendMes.get(),CLIENT_MES_SIZE);
 
 }
 

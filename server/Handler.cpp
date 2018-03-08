@@ -29,7 +29,32 @@ void Handler::handle(const int fd,const vector<int> &v) {
 
     }
     else if(n==clientMesSize) {
-        cout<<Db::Instance().Check(c_mes.m_mes);
+        switch(c_mes.m_command) {
+            case CLIENT_MES_LOGIN: {
+                string str(c_mes.m_message);
+                auto it = str.find('=');
+                string userName(str.begin(), str.begin() + it);
+                string pw(str.begin() + it + 1, str.end());
+
+                cout << "User:" << userName << endl;
+                cout << "Pw:" << pw << endl;
+
+                if (Db::Instance().Check(userName, pw)) {
+                    shared_ptr<ServerMes> sendMes = BuildServerMes(MES_SERVER_LOGSUCCESS, "hello,you log success");
+                    write(fd, sendMes.get(), serverMesSize);
+
+                } else {
+                    shared_ptr<ServerMes> sendMes = BuildServerMes(MES_SERVER_LOGFAIL, "sorry that you log fail");
+                    write(fd, sendMes.get(), serverMesSize);
+
+                }
+            }
+            case CLIENT_MES_GETCHATLIST:{
+
+            }
+
+        }
+
     }
 
 

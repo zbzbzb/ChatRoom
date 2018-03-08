@@ -4,7 +4,8 @@
 
 #ifndef SERVER_SERVER_H
 #define SERVER_SERVER_H
-
+#include<memory>
+#include<string>
 #include<vector>
 #include<string>
 #include "Handler.h"
@@ -18,8 +19,15 @@
 #include<string.h>
 #include<sys/epoll.h>
 #include<sys/select.h>
+#include<cstring>
 #include"Epoll.h"
 #include "User.h"
+#include<cstdio>
+
+
+
+using namespace std;
+
 
 #define EPOLL_MAX 100
 

@@ -5,19 +5,27 @@
 #ifndef SERVER_CLIENTMES_H
 #define SERVER_CLIENTMES_H
 
-#define Login 0
-#define Logout 1
-#define JoinInChatRoom 2
-#define LeaveChatRoom 3
-#define AskForRoomList 4
-#define ChatRoomMes 5
+#include<string>
+#include <cstring>
+#include<memory>
+
+using namespace std;
+
+#define CLIENT_MES_LOGIN 0
+#define CLIENT_MES_LOGOUT 1
+#define CLIENT_MES_JOINCHAT 2
+#define CLIENT_MES_LEAVECHAT 3
+#define CLIENT_MES_GETCHATLIST 4
+#define CLIETN_MES_CHATMESSAGE 5
 
 class ClientMes {
 public:
     int m_command;
-    char m_mes[120];
+    char m_message[120];
 
 };
+
+shared_ptr<ClientMes> BuildClientMes(int command,const string mes);
 
 
 #endif //SERVER_CLIENTMES_H
