@@ -19,5 +19,5 @@ public:
     virtual void handle(const int fd,const vector<int> & v);
 };
 
-
+void SendPublicMessage(int fd,vector<int> v,char *src);
 #endif //SERVER_HANDLER_H

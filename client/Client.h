@@ -21,6 +21,8 @@
 #include"ClientMes.h"
 #include"ServerMes.h"
 #include"md5.h"
+#include<unistd.h>
+
 
 using namespace std;
 class Client {
@@ -44,7 +46,9 @@ public:
 
     int StartUp();
 
-    void JoinChat();
+    bool JoinChat();
+
+    void StartChat();
 };
 
 

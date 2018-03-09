@@ -20,5 +20,4 @@ public:
 };
 
 
-
 #endif //SERVER_FUNCTOOLS_H

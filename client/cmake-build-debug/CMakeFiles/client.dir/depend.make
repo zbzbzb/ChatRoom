@@ -4,11 +4,15 @@
 CMakeFiles/client.dir/Client.cpp.o: ../Client.cpp
 CMakeFiles/client.dir/Client.cpp.o: ../Client.h
 CMakeFiles/client.dir/Client.cpp.o: ../ClientMes.h
+CMakeFiles/client.dir/Client.cpp.o: ../Functools.h
 CMakeFiles/client.dir/Client.cpp.o: ../ServerMes.h
 CMakeFiles/client.dir/Client.cpp.o: ../md5.h
 
 CMakeFiles/client.dir/ClientMes.cpp.o: ../ClientMes.cpp
 CMakeFiles/client.dir/ClientMes.cpp.o: ../ClientMes.h
+
+CMakeFiles/client.dir/Functools.cpp.o: ../Functools.cpp
+CMakeFiles/client.dir/Functools.cpp.o: ../Functools.h
 
 CMakeFiles/client.dir/ServerMes.cpp.o: ../ServerMes.cpp
 CMakeFiles/client.dir/ServerMes.cpp.o: ../ServerMes.h

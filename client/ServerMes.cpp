@@ -2,7 +2,9 @@
 // Created by zhoubin on 3/2/18.
 //
 
+#include <cstring>
 #include "ServerMes.h"
+#include<unistd.h>
 
 shared_ptr<ServerMes> BuildServerMes(int command,const string mes)
 {
@@ -13,4 +15,12 @@ shared_ptr<ServerMes> BuildServerMes(int command,const string mes)
     return c_mes;
 
 
+}
+
+ServerMes RecvServerMes(int fd)
+{
+    ServerMes recvMes;
+    int n=read(fd,&recvMes,SERVER_MES_SIZE);
+
+    return recvMes;
 }

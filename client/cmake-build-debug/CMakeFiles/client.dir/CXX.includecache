@@ -11,6 +11,16 @@ cstring
 -
 Client.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/Client.h
+memory
+-
+ClientMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
+ServerMes.h
+/home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h
+Functools.h
+/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h
+stdio.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/Client.h
 string
@@ -43,18 +53,50 @@ ServerMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h
 md5.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/md5.h
+unistd.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.cpp
 ClientMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
+unistd.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
+string
+-
+cstring
+-
+memory
+-
+
+/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.cpp
+iostream
+-
+Functools.h
+/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h
+
+/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h
+string
+-
+vector
+-
+map
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.cpp
+cstring
+-
 ServerMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h
+unistd.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h
+string
+-
+memory
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/client/main.cpp
 iostream

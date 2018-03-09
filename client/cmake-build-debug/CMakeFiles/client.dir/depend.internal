@@ -5,11 +5,15 @@ CMakeFiles/client.dir/Client.cpp.o
  /home/zhoubin/ProjectOnGit/ChatRoom/client/Client.cpp
  /home/zhoubin/ProjectOnGit/ChatRoom/client/Client.h
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
+ /home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h
  /home/zhoubin/ProjectOnGit/ChatRoom/client/md5.h
 CMakeFiles/client.dir/ClientMes.cpp.o
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.cpp
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
+CMakeFiles/client.dir/Functools.cpp.o
+ /home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.cpp
+ /home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h
 CMakeFiles/client.dir/ServerMes.cpp.o
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.cpp
  /home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.h

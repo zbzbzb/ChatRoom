@@ -177,6 +177,33 @@ ClientMes.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ClientMes.cpp.s
 .PHONY : ClientMes.cpp.s
 
+Functools.o: Functools.cpp.o
+
+.PHONY : Functools.o
+
+# target to build an object file
+Functools.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Functools.cpp.o
+.PHONY : Functools.cpp.o
+
+Functools.i: Functools.cpp.i
+
+.PHONY : Functools.i
+
+# target to preprocess a source file
+Functools.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Functools.cpp.i
+.PHONY : Functools.cpp.i
+
+Functools.s: Functools.cpp.s
+
+.PHONY : Functools.s
+
+# target to generate assembly for a file
+Functools.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/Functools.cpp.s
+.PHONY : Functools.cpp.s
+
 ServerMes.o: ServerMes.cpp.o
 
 .PHONY : ServerMes.o
@@ -273,6 +300,9 @@ help:
 	@echo "... ClientMes.o"
 	@echo "... ClientMes.i"
 	@echo "... ClientMes.s"
+	@echo "... Functools.o"
+	@echo "... Functools.i"
+	@echo "... Functools.s"
 	@echo "... ServerMes.o"
 	@echo "... ServerMes.i"
 	@echo "... ServerMes.s"

@@ -7,6 +7,9 @@
 #include "Client.h"
 #include<memory>
 #include"ClientMes.h"
+#include"ServerMes.h"
+#include"Functools.h"
+#include<stdio.h>
 
 #define CLIENT_MES_SIZE 124
 #define SERVER_MES_SIZE 124
@@ -54,7 +57,6 @@ void Client::Run() {
         {
             m_isLogin=true;
             Pro();
-
         }
         else
         {
@@ -65,8 +67,6 @@ void Client::Run() {
     {
 
     }
-
-
 }
 
 bool Client::Login(){
@@ -110,13 +110,6 @@ bool Client::Login(){
         close(m_connFd);
         return false;
     }
-
-    //cout<<loginMes.m_mes<<endl;
-
-
-
-
-
 }
 
 Client::~Client() {
@@ -138,29 +131,128 @@ Client::Client() {
 
 void Client::Pro() {
     //GetChatList();
-    cout<<"1.Join ChatRoom"<<endl;
+    cout<<"1.Get ChatRoomList"<<endl;
     cout<<"2.Quit"<<endl;
+
+    int choose;
+    cin>>choose;
+
+    switch(choose)
+    {
+        case(1):
+        {
+            GetChatList();
+
+
+        }
+    }
 }
 
 vector<string> Client::GetChatList()
 {
-    shared_ptr<ClientMes> sendMes=BuildClientMes(CLIENT_MES_GETCHATLIST,"");
+    SendClientMes(m_connFd,MES_CLIENT_GETCHATLIST,"");
+    ServerMes recvMes=RecvServerMes(m_connFd);
+
+    vector<string> roomList;
+    string message(recvMes.m_message);
+    string del("=");
+    Functools::Split(message,del,roomList);
+
+    int roomListNum=roomList.size();
+
+    for(int i=0;i<roomListNum;i++)
+    {
+        cout<<i+1<<":"<<roomList[i]<<endl;
+    }
+
+    int choose;
+    cin>>choose;
+
+    SendClientMes(m_connFd,MES_CLIENT_JOINCHAT,to_string(choose));
+    ServerMes recvMes2;
+    recvMes=RecvServerMes(m_connFd);
+
+    cout<<recvMes.m_message<<endl;
+    cout<<recvMes.m_command<<endl;
+
+    if(recvMes.m_command==MES_SERVER_JOINCHATSUCCESS)
+    {
+        StartChat();
+    }
+
+
+
+
+}
+
+bool Client::JoinChat()
+{
+    shared_ptr<ClientMes> sendMes=BuildClientMes(MES_CLIENT_JOINCHAT,"");
     write(m_connFd,sendMes.get(),CLIENT_MES_SIZE);
 
     ServerMes recvMes;
 
     read(m_connFd,&recvMes,SERVER_MES_SIZE);
 
-
-
+    if(recvMes.m_command==MES_SERVER_JOINCHATSUCCESS)
+    {
+        return true;
+    } else
+    {
+        return false;
+    }
 
 }
 
-void Client::JoinChat()
+void Client::StartChat()
 {
-    shared_ptr<ClientMes> sendMes=BuildClientMes(CLIENT_MES_JOINCHAT,"");
-    write(m_connFd,sendMes.get(),CLIENT_MES_SIZE);
+    int epfd;
+    epfd=epoll_create(2);
 
+    epoll_event std_in,net_in;
+
+    epoll_event result[2];
+
+    std_in.data.fd=fileno(stdin);
+    std_in.events=EPOLLIN;
+
+    net_in.data.fd=m_connFd;
+    net_in.events=EPOLLIN;
+
+    epoll_ctl(epfd,EPOLL_CTL_ADD,fileno(stdin),&std_in);
+    epoll_ctl(epfd,EPOLL_CTL_ADD,m_connFd,&net_in);
+
+    int nready=0;
+
+    char readBuff[41];
+    int readSize;
+
+    while(true)
+    {
+        nready=epoll_wait(epfd,result,2,-1);
+
+        for(int i=0;i<nready;i++)
+        {
+            if(!(result[i].events&EPOLLIN))
+                continue;
+            if(result[i].data.fd==fileno(stdin))
+            {
+                readSize=read(0,readBuff,40);
+                readBuff[readSize]='\0';
+                SendClientMes(m_connFd,MES_CLIENT_CHATMESSAGE,string(readBuff));
+
+            }
+            else if(result[i].data.fd==m_connFd)
+            {
+                ServerMes recvMes;
+                recvMes=RecvServerMes(m_connFd);
+                if(recvMes.m_command==MES_SERVER_CHATROOMMES)
+                {
+                    printf("%s",recvMes.m_message);
+                }
+            }
+        }
+    }
 }
 
 

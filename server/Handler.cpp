@@ -9,11 +9,14 @@
 
 using namespace std;
 
-
+extern map<int,int> user_room;
+extern pthread_mutex_t userFdSortByRoom_mutex;
+extern vector<vector<int> > userFdSortByRoom;
 extern vector<int> delFd;
+extern map<int,string> roomName;
 extern pthread_mutex_t delFd_mutex;
 extern pthread_mutex_t inRoomFd_mutex;
-extern vector<vector<int> > inRoomFd;
+extern vector<int > inRoomFd;
 extern vector<User> user;
 void Handler::handle(const int fd,const vector<int> &v) {
     int clientMesSize=sizeof(ClientMes);
@@ -30,7 +33,7 @@ void Handler::handle(const int fd,const vector<int> &v) {
     }
     else if(n==clientMesSize) {
         switch(c_mes.m_command) {
-            case CLIENT_MES_LOGIN: {
+            case MES_CLIENT_LOGIN: {
                 string str(c_mes.m_message);
                 auto it = str.find('=');
                 string userName(str.begin(), str.begin() + it);
@@ -49,32 +52,69 @@ void Handler::handle(const int fd,const vector<int> &v) {
 
                 }
             }
-            case CLIENT_MES_GETCHATLIST:{
+            break;
+            case MES_CLIENT_GETCHATLIST:
+            {
+                string roomNameList;
+                for(auto it=roomName.begin();it!=roomName.end();++it)
+                {
+                    roomNameList+=(*it).second+"=";
+
+                }
+                string roomList(roomNameList.begin(),roomNameList.end()-1);
+                SendServerMes(fd,MES_SERVER_CHATLIST,roomList);
+            }break;
+
+            case MES_CLIENT_JOINCHAT:
+            {
+
+                /*for(int i=0;i<10;i++)
+                {
+                    cout<<c_mes.m_message[i]<<endl;
+                }*/
+                int roomId=stoi(string(c_mes.m_message));
+                roomId-=1;
+
+                cout<<"ROOMID:"<<roomId<<endl;
+
+
+
+                pthread_mutex_lock(&userFdSortByRoom_mutex);
+                userFdSortByRoom[roomId].push_back(fd);
+                user_room[fd]=roomId;
+                pthread_mutex_unlock(&userFdSortByRoom_mutex);
+
+                SendServerMes(fd,MES_SERVER_JOINCHATSUCCESS);
+            }break;
+
+            case MES_CLIETN_CHATMESSAGE:
+            {
+
+                pthread_mutex_lock(&userFdSortByRoom_mutex);
+
+                vector<int> v(userFdSortByRoom[user_room[fd]]);
+                pthread_mutex_unlock(&userFdSortByRoom_mutex);
+
+                SendPublicMessage(fd,v,c_mes.m_message);
+
 
             }
+            break;
 
         }
 
     }
+}
 
+void SendPublicMessage(int fd,vector<int> v,char *src)
+{
+    cout<<"GET A MESSAGE"<<src<<endl;
+    ServerMes sendMes;
+    sendMes.m_command=MES_SERVER_CHATROOMMES;
+    strcpy(sendMes.m_message,src);
 
-
-
-
-
-
-    /*//cout<<"the fd:"<<fd<<endl;
-    char buff[20];
-    int n=read(fd,buff,20);
-    if(n==0)
+    for(auto it=v.begin();it!=v.end();++it)
     {
-        pthread_mutex_lock(&delFd_mutex);
-        delFd.push_back(fd);
-        pthread_mutex_unlock(&delFd_mutex);
-        return;
+        write(*it,&sendMes,SERVER_MES_SIZE);
     }
-
-    for(int i=0;i<v.size();i++)
-        write(v[i],buff,n);*/
-
 }

@@ -18,8 +18,13 @@ pthread_mutex_t delFd_mutex=PTHREAD_MUTEX_INITIALIZER;
 
 vector<int> delFd;
 
-vector<vector<int> > inRoomFd;
+map<int,int> user_room;
+
+vector<int> inRoomFd;
 vector<User> user;
+map<int,string> roomName;
+pthread_mutex_t userFdSortByRoom_mutex=PTHREAD_MUTEX_INITIALIZER;
+vector<vector<int> > userFdSortByRoom;
 
 
 Server::Server(int fdNum,const Handler handler):m_ep(EPOLL_MAX)
@@ -49,9 +54,11 @@ int Server::Bind() {
         throw runtime_error(strerror(errno));
     }
 
-    setsockopt(m_listenFd,SOL_SOCKET,SO_REUSEADDR,NULL,sizeof(m_listenFd));
+    int opt=1;
 
-    setsockopt(m_listenFd,SOL_SOCKET,SO_REUSEPORT,NULL,sizeof(m_listenFd));
+    setsockopt(m_listenFd,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt));
+
+    setsockopt(m_listenFd,SOL_SOCKET,SO_REUSEPORT,&opt,sizeof(opt));
 
     sockaddr_in servAddr;
 
@@ -82,11 +89,19 @@ void Server::Run() {
     Listen();
 
     int roomNum=stoi(Config::Instance().get("roomNum"));
+    vector<int> tmp;
     for(int i=0;i<roomNum;i++)
     {
-        vector<int> v;
-        inRoomFd.push_back(v);
+        string room=string("room")+to_string(i+1);
+        roomName[i]=Config::Instance().get(room);
+        userFdSortByRoom.push_back(tmp);
     }
+
+    /*for(auto it=roomName.begin();it!=roomName.end();++it)
+    {
+        cout<<(*it).first<<ends<<(*it).second<<endl;
+    }
+    exit(0);*/
     ThreadPool tp;
     tp.Init(5);
     int nready;

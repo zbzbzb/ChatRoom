@@ -96,6 +96,12 @@
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/client/Functools.h">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/home/zhoubin/ProjectOnGit/ChatRoom/client/ServerMes.cpp">
 			<Option target="client"/>
 		</Unit>

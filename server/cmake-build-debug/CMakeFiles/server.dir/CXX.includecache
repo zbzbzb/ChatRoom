@@ -9,6 +9,8 @@
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.cpp
 ClientMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
+unistd.h
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
 string
@@ -178,6 +180,8 @@ ServerMes.h
 string
 -
 memory
+-
+unistd.h
 -
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Task.cpp

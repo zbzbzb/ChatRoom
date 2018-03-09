@@ -49,10 +49,7 @@ private:
     Handler m_handler;
     Epoll m_ep;
     int m_fdNum;
-
-
     void ClearDelFd();
-
     void CurConnFd();
 };
 

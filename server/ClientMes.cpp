@@ -3,6 +3,7 @@
 //
 
 #include "ClientMes.h"
+#include<unistd.h>
 
 
 shared_ptr<ClientMes> BuildClientMes(int command,const string mes)
@@ -14,4 +15,12 @@ strcpy(c_mes->m_message,mes.c_str());
 return c_mes;
 
 
+}
+
+ClientMes RecvClientMes(int fd)
+{
+    ClientMes recvMes;
+    int n=read(fd,&recvMes,CLIENT_MES_SIZE);
+
+    return recvMes;
 }
