@@ -34,6 +34,6 @@ public:
 
 shared_ptr<ClientMes> BuildClientMes(int command,const string mes);
 
-bool SendClientMes(int fd,int command,const string & mes);
+bool SendClientMes(int fd,int command,const string & mes="");
 
 #endif //CLIENT_CLIENTMES_H

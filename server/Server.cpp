@@ -11,21 +11,15 @@
 
 using namespace std;
 
-pthread_mutex_t inRoomFd_mutex=PTHREAD_MUTEX_INITIALIZER;
 
-pthread_mutex_t delFd_mutex=PTHREAD_MUTEX_INITIALIZER;
+vector<int> fd_to_delete;
+pthread_mutex_t fd_to_delete_mutex=PTHREAD_MUTEX_INITIALIZER;
 
+map<int,int> userfd_room;
+vector<vector<int> > userfd_sort_by_room;
+pthread_mutex_t userfd_sort_by_room_mutex=PTHREAD_MUTEX_INITIALIZER;
 
-vector<int> delFd;
-
-map<int,int> user_room;
-
-vector<int> inRoomFd;
-vector<User> user;
-map<int,string> roomName;
-pthread_mutex_t userFdSortByRoom_mutex=PTHREAD_MUTEX_INITIALIZER;
-vector<vector<int> > userFdSortByRoom;
-
+map<int,string> room_name;
 
 Server::Server(int fdNum,const Handler handler):m_ep(EPOLL_MAX)
 {
@@ -36,16 +30,16 @@ Server::Server(int fdNum,const Handler handler):m_ep(EPOLL_MAX)
 void Server::ClearDelFd()
 {
 
-    pthread_mutex_lock(&delFd_mutex);
-    for(auto it=delFd.begin();it!=delFd.end();++it)
+    pthread_mutex_lock(&fd_to_delete_mutex);
+    for(auto it=fd_to_delete.begin();it!=fd_to_delete.end();++it)
     {
         cout<<"Fd "<<*it<<"delete "<<endl;
         m_connFd.erase(find(m_connFd.begin(),m_connFd.end(),*it));
         m_ep.Delete(*it);
         close(*it);
     }
-    delFd.clear();
-    pthread_mutex_unlock(&delFd_mutex);
+    fd_to_delete.clear();
+    pthread_mutex_unlock(&fd_to_delete_mutex);
 }
 
 int Server::Bind() {
@@ -93,11 +87,11 @@ void Server::Run() {
     for(int i=0;i<roomNum;i++)
     {
         string room=string("room")+to_string(i+1);
-        roomName[i]=Config::Instance().get(room);
-        userFdSortByRoom.push_back(tmp);
+        room_name[i]=Config::Instance().get(room);
+        userfd_sort_by_room.push_back(tmp);
     }
 
-    /*for(auto it=roomName.begin();it!=roomName.end();++it)
+    /*for(auto it=room_name.begin();it!=room_name.end();++it)
     {
         cout<<(*it).first<<ends<<(*it).second<<endl;
     }

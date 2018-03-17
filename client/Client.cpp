@@ -5,7 +5,6 @@
 
 #include <cstring>
 #include "Client.h"
-#include<memory>
 #include"ClientMes.h"
 #include"ServerMes.h"
 #include"Functools.h"
@@ -35,38 +34,45 @@ int Client::Socket() {
 
     return m_connFd;
 }
-
-int Client::StartUp()
+ 
+void Client::MainMenu()
 {
     int choose;
-    cout<<"1:Login"<<endl;
+  startup:  cout<<"1:Login"<<endl;
     cout<<"2:Register"<<endl;
+    cout<<"3:Quit"<<endl;
+    
     cin>>choose;
-    return choose;
+    
+    switch(choose)
+    {
+        case 1:
+        {
+            if(Login())
+            {
+                SecondaryMenu();
+            } else
+            {
+                goto startup;
+            }
+        }break;
+        case 2:
+        {
+            
+        }break;
+        case 3:
+        {
+            
+        }
+            
+    }
 }
 
 
 
 
 void Client::Run() {
-    startup:int choose=StartUp();
-    if(choose==1)
-    {
-        bool loginResult=Login();
-        if(loginResult)
-        {
-            m_isLogin=true;
-            Pro();
-        }
-        else
-        {
-            goto startup;
-        }
-    }
-    else
-    {
-
-    }
+    MainMenu();
 }
 
 bool Client::Login(){
@@ -84,9 +90,6 @@ bool Client::Login(){
     ClientMes loginMes;
     loginMes.m_command=0;
 
-
-
-
     string tmp=userName+"="+MD5(userPw).toStr();
 
     strcpy(loginMes.m_message,tmp.c_str());
@@ -96,8 +99,6 @@ bool Client::Login(){
     ServerMes loginResult;
 
     int n=read(m_connFd,&loginResult,sizeof(loginResult));
-
-
 
     if(loginResult.m_command==MES_SERVER_LOGSUCCESS)
     {
@@ -129,8 +130,9 @@ Client::Client() {
 
 }
 
-void Client::Pro() {
-    //GetChatList();
+void Client::SecondaryMenu() {
+
+    Sstartup:
     cout<<"1.Get ChatRoomList"<<endl;
     cout<<"2.Quit"<<endl;
 
@@ -141,72 +143,62 @@ void Client::Pro() {
     {
         case(1):
         {
-            GetChatList();
+            vector<string> chatroom_list;
+            GetChatRoomList(chatroom_list);
+            
+            int chatroom_id=ChooseChatRoom(chatroom_list);
+
+            if(JoinChatRoom(chatroom_id))
+            {
+                StartChat();
+                goto Sstartup;
+            } else
+            {
+                cout<<"Join chatroom fail!"<<endl;
+                goto Sstartup;
+            }
 
 
+            
+            
         }
     }
 }
 
-vector<string> Client::GetChatList()
+void Client::GetChatRoomList(vector<string> &chatList)
 {
     SendClientMes(m_connFd,MES_CLIENT_GETCHATLIST,"");
     ServerMes recvMes=RecvServerMes(m_connFd);
-
-    vector<string> roomList;
+    
     string message(recvMes.m_message);
     string del("=");
-    Functools::Split(message,del,roomList);
-
-    int roomListNum=roomList.size();
-
-    for(int i=0;i<roomListNum;i++)
-    {
-        cout<<i+1<<":"<<roomList[i]<<endl;
-    }
-
-    int choose;
-    cin>>choose;
-
-    SendClientMes(m_connFd,MES_CLIENT_JOINCHAT,to_string(choose));
-    ServerMes recvMes2;
-    recvMes=RecvServerMes(m_connFd);
-
-    cout<<recvMes.m_message<<endl;
-    cout<<recvMes.m_command<<endl;
-
-    if(recvMes.m_command==MES_SERVER_JOINCHATSUCCESS)
-    {
-        StartChat();
-    }
-
-
-
+    Functools::Split(message,del,chatList);
 
 }
 
-bool Client::JoinChat()
+bool Client::JoinChatRoom(int chatRoomId)
 {
-    shared_ptr<ClientMes> sendMes=BuildClientMes(MES_CLIENT_JOINCHAT,"");
-    write(m_connFd,sendMes.get(),CLIENT_MES_SIZE);
+    string chatroom_id=to_string(chatRoomId);
+    SendClientMes(m_connFd,MES_CLIENT_JOINCHAT,chatroom_id);
 
     ServerMes recvMes;
 
-    read(m_connFd,&recvMes,SERVER_MES_SIZE);
+    recvMes=RecvServerMes(m_connFd);
 
     if(recvMes.m_command==MES_SERVER_JOINCHATSUCCESS)
     {
         return true;
-    } else
+    } 
+    else
     {
         return false;
     }
-
 }
 
 void Client::StartChat()
 {
     int epfd;
+
     epfd=epoll_create(2);
 
     epoll_event std_in,net_in;
@@ -224,9 +216,6 @@ void Client::StartChat()
 
     int nready=0;
 
-    char readBuff[41];
-    int readSize;
-
     while(true)
     {
         nready=epoll_wait(epfd,result,2,-1);
@@ -237,22 +226,69 @@ void Client::StartChat()
                 continue;
             if(result[i].data.fd==fileno(stdin))
             {
-                readSize=read(0,readBuff,40);
-                readBuff[readSize]='\0';
-                SendClientMes(m_connFd,MES_CLIENT_CHATMESSAGE,string(readBuff));
+                if(!HandleStdInput())
+                    return;
 
             }
             else if(result[i].data.fd==m_connFd)
             {
-                ServerMes recvMes;
-                recvMes=RecvServerMes(m_connFd);
-                if(recvMes.m_command==MES_SERVER_CHATROOMMES)
+                ServerMes recvMes2=RecvServerMes(m_connFd);;
+
+                if(recvMes2.m_command==MES_SERVER_CHATROOMMES)
                 {
-                    printf("%s",recvMes.m_message);
+                    cout<<"RECEIVE A MESSAGE"<<endl;
+                    PutOutMessage(recvMes2.m_message);
                 }
             }
         }
     }
+}
+
+void Client::PutOutMessage(char *src) {
+    string mes(src);
+    auto pos=mes.find('=');
+    string userName(mes.begin(),mes.begin()+pos);
+    string message(mes.begin()+pos+1,mes.end());
+    cout<<userName<<":"<<message<<endl;
+}
+
+bool Client::HandleStdInput() {
+
+    char std_mes[STD_INPUT_SIZE];
+    int nSize=read(fileno(stdin),std_mes,STD_INPUT_SIZE);
+    std_mes[nSize-1]='\0';
+    if(strcmp(std_mes,"exit")==0)
+    {
+        cout<<"Exit The Chat"<<endl;
+        LeaveChatRoom();
+        return false;
+        
+    } else
+    {
+        SendClientMes(m_connFd,MES_CLIENT_CHATMESSAGE,std_mes);
+        return true;
+    }
+
+}
+
+void Client::LeaveChatRoom()
+{
+    ClientMes sendMes;
+    SendClientMes(m_connFd,MES_CLIENT_LEAVECHAT);
+}
+
+int Client::ChooseChatRoom(const vector<string> &chatRoomList)
+{
+    int chatroom_num=chatRoomList.size();
+
+    for(int i=0;i<chatroom_num;i++)
+    {
+        cout<<i+1<<":"<<chatRoomList[i]<<endl;
+    }
+
+    int choose;
+    cin>>choose;
+    return choose;
 }
 
 

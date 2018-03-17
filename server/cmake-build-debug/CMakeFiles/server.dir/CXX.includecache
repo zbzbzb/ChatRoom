@@ -95,8 +95,6 @@ map
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.cpp
 Handler.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Handler.h
-User.h
-/home/zhoubin/ProjectOnGit/ChatRoom/server/User.h
 ClientMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/ClientMes.h
 ServerMes.h
@@ -117,6 +115,10 @@ vector
 -
 Db.h
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Db.h
+algorithm
+-
+functional
+-
 
 /home/zhoubin/ProjectOnGit/ChatRoom/server/Server.cpp
 Server.h

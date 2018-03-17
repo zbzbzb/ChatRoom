@@ -22,6 +22,7 @@
 #include"ServerMes.h"
 #include"md5.h"
 #include<unistd.h>
+#define STD_INPUT_SIZE 80
 
 
 using namespace std;
@@ -37,18 +38,34 @@ public:
     int Socket();
     void Connect();
     void Run();
-    void Pro();
-    bool Login();
-    vector<string> GetChatList();
 
+    bool Login();
+
+
+    void PutOutMessage(char *src);
     Client();
     ~Client();
 
-    int StartUp();
 
-    bool JoinChat();
+    bool JoinChatRoom(int chatRoomId);
 
     void StartChat();
+
+    bool HandleStdInput();
+
+
+
+    void MainMenu();
+
+    void LeaveChatRoom();
+
+    void SecondaryMenu();
+
+    void GetChatRoomList(vector<string> &chatList);
+
+    int ChooseChatRoom();
+
+    int ChooseChatRoom(const vector<string> &chatRoomList);
 };
 
 

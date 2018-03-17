@@ -28,7 +28,6 @@ CMakeFiles/server.dir/Handler.cpp.o: ../Db.h
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.cpp
 CMakeFiles/server.dir/Handler.cpp.o: ../Handler.h
 CMakeFiles/server.dir/Handler.cpp.o: ../ServerMes.h
-CMakeFiles/server.dir/Handler.cpp.o: ../User.h
 
 CMakeFiles/server.dir/Server.cpp.o: ../Config.h
 CMakeFiles/server.dir/Server.cpp.o: ../Db.h

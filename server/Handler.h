@@ -11,6 +11,8 @@
 #include<unistd.h>
 #include<vector>
 #include"Db.h"
+#include<algorithm>
+#include<functional>
 
 using namespace std;
 

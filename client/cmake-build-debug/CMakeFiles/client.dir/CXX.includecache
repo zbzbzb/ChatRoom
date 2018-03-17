@@ -11,8 +11,6 @@ cstring
 -
 Client.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/Client.h
-memory
--
 ClientMes.h
 /home/zhoubin/ProjectOnGit/ChatRoom/client/ClientMes.h
 ServerMes.h
